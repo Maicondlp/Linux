@@ -24,10 +24,15 @@ A configuração de Gateway também poderá ser feita utilizando o comando:
 ~~~		
 route -n
 route del default
-route add default gw 10.3.16.1
+route add default gw IP_GATEWAY
 ~~~		
 
 Para reiniciar o serviço de rede utilize:
 ~~~		
 /etc/init.d/networking restart
 ~~~		
+
+#### MAPEAR VOLUME DO SAMBA
+~~~	
+mount -t cifs -o username=USUARIO //IP_DO_SERVIDOR/DIRETÓRIO/ /mnt
+~~~	
